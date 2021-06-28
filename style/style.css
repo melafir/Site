@@ -1,3 +1,9 @@
+:root{
+    font-size: 1vh;
+}
+*{
+    box-sizing: border-box;
+}
 body{
 background-color: rgb(255, 255, 255);
 height: 100vh;
@@ -26,7 +32,7 @@ align-items: center;
 }
 .field{
     border: 1px solid black;
-    box-shadow: 5px 5px 20px black;     
+    box-shadow: 25px 25px 20px black;     
     background-color: green;
     display: flex;
     flex-direction: row;
@@ -45,7 +51,7 @@ align-items: center;
 #scoreN{
     width:4em;
     background-color: lightblue;
-    font-size: 2em;
+    font-size: 4rem;
     border: 1px solid rgba(0, 0, 255, 0.459);
     text-align: center;
 }
@@ -54,7 +60,7 @@ align-items: center;
     margin-left: 1%;
 }
 #logo{
-    font-size: 1.5em;
+    font-size: 2rem;
     color: #997754;
     margin-right: 1%;
     align-self: flex-end;
@@ -64,24 +70,30 @@ align-items: center;
     border-right: 5px solid white;
     width: 50%;    
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3,1fr);
-    grid-template-areas: 
-    ". . wingL ."
-    "keeperL defL midL  forL"
-    " . . tackle cross";
+    grid-template-columns: 2% repeat(4, 1fr) 2%;
+    grid-template-rows: 2% repeat(3,1fr) 2%;
+    grid-gap: 1%;
+    grid-template-areas:
+    ". . . . . ." 
+    ". . . wingL . ."
+    ". keeperL defL midL  forL ."
+    ". . . tackle cross ."
+    ". . . . . .";
 }
 .rigthField{
     border: 10px solid white;
     border-left: 5px solid white;
     width: 50%;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3,1fr);
-    grid-template-areas: 
-    ". wingR . ."
-    "forR midR defR keeperR"
-    " shot pk . .";    
+    grid-template-columns: 2% repeat(4, 1fr) 2%;
+    grid-template-rows: 2% repeat(3,1fr) 2%;
+    grid-gap: 1%;
+    grid-template-areas:
+    ". . . . . ."
+    ". . wingR . . ."
+    ".forR midR defR keeperR ."
+    " .shot pk . . ."
+    ". . . . . .";    
 }
 #keeperL{
     grid-area: keeperL;
@@ -109,7 +121,7 @@ align-items: center;
     height: 100%;
     width: 100%;
     user-select: none;
-    font-size: 1.5em;
+    font-size: 2.5rem;
     display: flex;
     justify-content: center;
     align-items: center;     
@@ -140,7 +152,7 @@ align-items: center;
     height: 100%;
     width: 100%;
     user-select: none;
-    font-size: 1.5em;
+    font-size: 2.5rem;
     display: flex;
     justify-content: center;
     align-items: center;     
@@ -164,7 +176,7 @@ align-items: center;
     background-color: darkblue;
 }
 #time, #timeR{
-    font-size: 2em;    
+    font-size: 3rem;    
 }
 #timeR{
     margin-right: 15px;
@@ -179,14 +191,15 @@ align-items: center;
     width: 5%;
     height: 10%;
     user-select: none;
-    font-size: 1.5em;
+    font-size: 2.5rem;
 }
 #start{
+    font-size: 1.5rem;
     justify-content: flex-start;
     right: 20%;
     align-self: center;
 }
 #color{
-    font-size: 1em;
+    font-size: 1.5rem;
     user-select: none;   
 }
