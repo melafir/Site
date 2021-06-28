@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Pocket Football</title>
+</head>
+<body id="body">
+    <div class="slider">
+        <label for="rangeR" id="rL">
+            <span>R: </span>
+            <input type="range" id="rangeR" min="0" max="255" value="255" onchange="color(this.id,this.value)">
+            <span id="rangeRS">255</span>
+        </label>
+        <label for="rangeG" id="gL">
+            <span>G: </span>
+            <input type="range" id="rangeG" min="0" max="255" value="255" onchange="color(this.id,this.value)">
+            <span id="rangeGS">255</span>
+        </label>
+        <label for="rangeB" id="bL">
+            <span>B: </span>
+            <input type="range" id="rangeB" min="0" max="255" value="255" onchange="color(this.id,this.value)">
+            <span id="rangeBS">255</span>
+        </label>
+    </div>
+    <div class="content">
+        <div class="score">
+            <div id="start">
+                <span id="startRoll" onclick="randomDice(this.id)">Start</span>
+                <span id="time">00</span>
+                <span id="timeR">:00</span>
+            </div>  
+            <div id="tabloCenter">         
+                <div id="cardsL">                
+                    <span id="ycardsL" onclick="ycards(this.id)">0</span>                
+                    <span id="rcardsL"></span>                              
+                </div>            
+                <input type="number" id="scoreN" value="0">
+                <span> - </span>
+                <input type="number" id ="scoreN" value="0">
+                <div id="cardsR">                
+                    <span id="ycardsR" onclick="ycards(this.id)">0</span>                
+                    <span id="rcardsR"></span>                              
+                </div>
+            </div> 
+            <div id="logo">
+                <p>Pocket Football</p>                
+            </div>
+            <div id="setting">
+                <span id="color" onclick="visibleSlider()">🎨</span>
+            </div>
+        </div>
+        <div class="field">            
+            <div class="leftField">
+                    <div id="keeperL" onclick="randomDice(this.id)">K</div>
+                    <div id="defL" onclick="randomDice(this.id)">D</div>
+                    <div id="midL" onclick="randomDice(this.id)">M</div>
+                    <div id="wingL" onclick="randomDice(this.id)">W</div>
+                    <div id="forL" onclick="randomDice(this.id)">F</div>
+                    <div id="tackle" onclick="randomDice(this.id)">T</div>
+                    <div id="cross" onclick="randomDice(this.id)">C</div>                    
+            </div>
+            <div class="rigthField">
+                <div id="keeperR" onclick="randomDice(this.id)">K</div>
+                    <div id="defR" onclick="randomDice(this.id)">D</div>
+                    <div id="midR" onclick="randomDice(this.id)">M</div>
+                    <div id="wingR" onclick="randomDice(this.id)">W</div>
+                    <div id="forR" onclick="randomDice(this.id)">F</div>
+                    <div id="shot" onclick="randomDice(this.id)">S</div>
+                    <div id="pk" onclick="randomDice(this.id)">P</div>
+            </div>
+        </div>
+    </div>    
+<script src="./js/script.js"></script>
+</body>
+</html>
